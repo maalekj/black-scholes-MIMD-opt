@@ -2,9 +2,26 @@
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
-// #include <iostream>
-
+#include <time.h>
 #define inv_sqrt_2xPI 0.39894228040143270286
+
+
+typedef struct TestsData_ {
+    float spotPrice;          // spot price
+    float strike;     // strike price
+    float rate;          // risk-free interest rate
+    float divq;       // dividend rate
+    float volatility;          // volatility
+    float otime;          // time to maturity or option expiration in years
+    //     (1yr = 1.0, 6mos = 0.5, 3mos = 0.25, ..., etc)
+    const char *otype;  // Option type.  "P"=PUT, "C"=CALL
+    float divs;       // dividend vals (not used in this test)
+    float DGrefval;   // DerivaGem Reference Value
+} TestsData;
+
+TestsData data_init[] = {
+#include "TestData.txt"
+};
 
 float CNDF (float InputX)
 {
@@ -134,37 +151,36 @@ float blackScholes(float sptprice, float strike, float rate, float volatility,
     return OptionPrice;
 }
 
-int main(int argc, char *argv[])
-{
-    float spotprice ;
-    float strike    ;
-    float rate      ;
-    float volatility;
-    float otime     ;
-    int   otype     ;
-    char  otype_c   ;
+int main(int args, char *argv[]) {
+    printf("hello world\n");
+    int tests_size = sizeof(data_init)/sizeof(TestsData);
+    int num_threads = 16;
 
-    printf("Spot Price = "        ); scanf("%f", &spotprice );
-    printf("Strike Price = "      ); scanf("%f", &strike    );
-    printf("Risk-Free Rate = "    ); scanf("%f", &rate      );
-    printf("Volatility = "        ); scanf("%f", &volatility);
-    printf("Time-to-Maturity = "  ); scanf("%f", &otime     );
-    printf("Option Type "         );
-    printf("('P:put, 'C':call) = "); scanf("\n%c", &otype_c    );
+    // Time keeping
+    struct timespec b_start_t, a_start_t, b_end_t, a_end_t;
 
-    otype = (tolower(otype_c) == 'p')? 1 : 0;
 
-    printf("\n\n");
-    printf("Spot Price:       %f \n", spotprice);
-    printf("Strike Price:     %f \n", strike);
-    printf("Risk-Free Rate:   %f \n", rate);
-    printf("Volatility:       %f \n", volatility);
-    printf("Time-to-Maturity: %f \n", otime);
-    printf("Option Type:      %s  \n", (otype == 1) ? "put" : "call");
+    // Warm up
+    clock_gettime(CLOCK_MONOTONIC, &b_start_t);
+    clock_gettime(CLOCK_MONOTONIC, &b_end_t);
 
-    float oprice = blackScholes(spotprice, strike, rate, volatility, otime, otype, 0);
+    // Perform SISD calculation on test data
+    clock_gettime(CLOCK_MONOTONIC, &b_start_t);
+    for(int i=0; i<tests_size; i++) {
+        float oprice = blackScholes(data_init[i].spotPrice, data_init[i].strike, data_init[i].rate, data_init[i].volatility, data_init[i].otime, data_init[i].otype, 0);
+        // printf("price of %d = %.5f\n", i+1, oprice);
+    }
+    clock_gettime(CLOCK_MONOTONIC, &b_end_t);
 
-    printf("Option Price:     %f \n", oprice);
+    unsigned long long b_time = ((b_end_t.tv_sec - b_start_t.tv_sec) * 1000000000) + (b_end_t.tv_nsec - b_start_t.tv_nsec);
 
+
+    // Display information
+    printf("Time for running:\n");
+    printf("*** SISD  Implementation: %lld ns\n", b_time);
+    // printf("*** MIMD Implementation: %lld ns\n", a_time);
+    printf("\n");
+    printf("\n");
+    // printf("      -> Speedup = %.2fx\n", ((b_time * 1.0f) / a_time));
     return 0;
 }
