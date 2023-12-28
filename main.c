@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <stdbool.h>
 #include <string.h>
 #include <time.h>
 #define inv_sqrt_2xPI 0.39894228040143270286
@@ -151,10 +152,20 @@ float blackScholes(float sptprice, float strike, float rate, float volatility,
     return OptionPrice;
 }
 
+int oTypeCharToInt(const char* c) {
+    if (strcmp(c, "P") == 0) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
 int main(int args, char *argv[]) {
     printf("hello world\n");
     int tests_size = sizeof(data_init)/sizeof(TestsData);
     int num_threads = 16;
+    float sisd_result[tests_size];
+    bool is_valid = false;
 
     // Time keeping
     struct timespec b_start_t, a_start_t, b_end_t, a_end_t;
@@ -167,13 +178,20 @@ int main(int args, char *argv[]) {
     // Perform SISD calculation on test data
     clock_gettime(CLOCK_MONOTONIC, &b_start_t);
     for(int i=0; i<tests_size; i++) {
-        float oprice = blackScholes(data_init[i].spotPrice, data_init[i].strike, data_init[i].rate, data_init[i].volatility, data_init[i].otime, data_init[i].otype, 0);
-        // printf("price of %d = %.5f\n", i+1, oprice);
+        sisd_result[i] = blackScholes(data_init[i].spotPrice, data_init[i].strike, data_init[i].rate, data_init[i].volatility, data_init[i].otime, oTypeCharToInt(data_init[i].otype), 0);
+        // printf("price of %d = %.5f\n", i+1,  sisd_result[i]);
     }
     clock_gettime(CLOCK_MONOTONIC, &b_end_t);
 
     unsigned long long b_time = ((b_end_t.tv_sec - b_start_t.tv_sec) * 1000000000) + (b_end_t.tv_nsec - b_start_t.tv_nsec);
 
+
+
+    //Check if the results are maching or not
+    for (int i = 0; i < tests_size; i++) {
+        // printf("%.5f\n", sisd_result[i]);
+
+    }
 
     // Display information
     printf("Time for running:\n");
