@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="black_scholes_MIMD_opt"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/learning&amp;work/mx/COE502/black-scholes-MIMD-opt/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Users/ADMINI~1/AppData/Local/Programs/CLIONN~1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/learning&amp;work/mx/COE502/black-scholes-MIMD-opt/cmake-build-release/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/Users/ADMINI~1/AppData/Local/Programs/CLIONN~1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/learning&amp;work/mx/COE502/black-scholes-MIMD-opt/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/ADMINI~1/AppData/Local/Programs/CLIONN~1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/learning&amp;work/mx/COE502/black-scholes-MIMD-opt/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/ADMINI~1/AppData/Local/Programs/CLIONN~1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/learning&amp;work/mx/COE502/black-scholes-MIMD-opt/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="black_scholes_MIMD_opt">
+				<Option output="D:/learning&amp;work/mx/COE502/black-scholes-MIMD-opt/cmake-build-release/black_scholes_MIMD_opt.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/learning&amp;work/mx/COE502/black-scholes-MIMD-opt/cmake-build-release"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/Administrator/AppData/Local/Programs/CLion Nova/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="C:/Users/Administrator/AppData/Local/Programs/CLion Nova/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="C:/Users/Administrator/AppData/Local/Programs/CLion Nova/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="C:/Users/Administrator/AppData/Local/Programs/CLion Nova/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Users/ADMINI~1/AppData/Local/Programs/CLIONN~1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/learning&amp;work/mx/COE502/black-scholes-MIMD-opt/cmake-build-release/Makefile&quot;  VERBOSE=1 black_scholes_MIMD_opt"/>
+					<CompileFile command="C:/Users/ADMINI~1/AppData/Local/Programs/CLIONN~1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/learning&amp;work/mx/COE502/black-scholes-MIMD-opt/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/ADMINI~1/AppData/Local/Programs/CLIONN~1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/learning&amp;work/mx/COE502/black-scholes-MIMD-opt/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/ADMINI~1/AppData/Local/Programs/CLIONN~1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/learning&amp;work/mx/COE502/black-scholes-MIMD-opt/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="black_scholes_MIMD_opt/fast">
+				<Option output="D:/learning&amp;work/mx/COE502/black-scholes-MIMD-opt/cmake-build-release/black_scholes_MIMD_opt.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/learning&amp;work/mx/COE502/black-scholes-MIMD-opt/cmake-build-release"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/Administrator/AppData/Local/Programs/CLion Nova/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="C:/Users/Administrator/AppData/Local/Programs/CLion Nova/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="C:/Users/Administrator/AppData/Local/Programs/CLion Nova/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="C:/Users/Administrator/AppData/Local/Programs/CLion Nova/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Users/ADMINI~1/AppData/Local/Programs/CLIONN~1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/learning&amp;work/mx/COE502/black-scholes-MIMD-opt/cmake-build-release/Makefile&quot;  VERBOSE=1 black_scholes_MIMD_opt/fast"/>
+					<CompileFile command="C:/Users/ADMINI~1/AppData/Local/Programs/CLIONN~1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/learning&amp;work/mx/COE502/black-scholes-MIMD-opt/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/ADMINI~1/AppData/Local/Programs/CLIONN~1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/learning&amp;work/mx/COE502/black-scholes-MIMD-opt/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/ADMINI~1/AppData/Local/Programs/CLIONN~1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/learning&amp;work/mx/COE502/black-scholes-MIMD-opt/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/learning&amp;work/mx/COE502/black-scholes-MIMD-opt/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Users/ADMINI~1/AppData/Local/Programs/CLIONN~1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/learning&amp;work/mx/COE502/black-scholes-MIMD-opt/cmake-build-release/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/Users/ADMINI~1/AppData/Local/Programs/CLIONN~1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/learning&amp;work/mx/COE502/black-scholes-MIMD-opt/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/ADMINI~1/AppData/Local/Programs/CLIONN~1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/learning&amp;work/mx/COE502/black-scholes-MIMD-opt/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/ADMINI~1/AppData/Local/Programs/CLIONN~1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/learning&amp;work/mx/COE502/black-scholes-MIMD-opt/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/learning&amp;work/mx/COE502/black-scholes-MIMD-opt/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Users/ADMINI~1/AppData/Local/Programs/CLIONN~1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/learning&amp;work/mx/COE502/black-scholes-MIMD-opt/cmake-build-release/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/Users/ADMINI~1/AppData/Local/Programs/CLIONN~1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/learning&amp;work/mx/COE502/black-scholes-MIMD-opt/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/ADMINI~1/AppData/Local/Programs/CLIONN~1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/learning&amp;work/mx/COE502/black-scholes-MIMD-opt/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/ADMINI~1/AppData/Local/Programs/CLIONN~1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/learning&amp;work/mx/COE502/black-scholes-MIMD-opt/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/learning&amp;work/mx/COE502/black-scholes-MIMD-opt/main.c">
+			<Option target="black_scholes_MIMD_opt"/>
+		</Unit>
+		<Unit filename="D:/learning&amp;work/mx/COE502/black-scholes-MIMD-opt/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

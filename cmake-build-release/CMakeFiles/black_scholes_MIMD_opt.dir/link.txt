@@ -1,0 +1,3 @@
+"C:\Users\Administrator\AppData\Local\Programs\CLion Nova\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\black_scholes_MIMD_opt.dir/objects.a
+C:\Users\ADMINI~1\AppData\Local\Programs\CLIONN~1\bin\mingw\bin\ar.exe qc CMakeFiles\black_scholes_MIMD_opt.dir/objects.a @CMakeFiles\black_scholes_MIMD_opt.dir\objects1.rsp
+C:\Users\ADMINI~1\AppData\Local\Programs\CLIONN~1\bin\mingw\bin\gcc.exe -O3 -DNDEBUG -Wl,--whole-archive CMakeFiles\black_scholes_MIMD_opt.dir/objects.a -Wl,--no-whole-archive -o black_scholes_MIMD_opt.exe -Wl,--out-implib,libblack_scholes_MIMD_opt.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\black_scholes_MIMD_opt.dir\linkLibs.rsp
