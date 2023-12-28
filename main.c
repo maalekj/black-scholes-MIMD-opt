@@ -25,6 +25,16 @@ typedef struct TestsData_ {
 
 TestsData data_init[] = {
 #include "testData.txt"
+#include "testData.txt"
+#include "testData.txt"
+#include "testData.txt"
+#include "testData.txt"
+#include "testData.txt"
+#include "testData.txt"
+#include "testData.txt"
+#include "testData.txt"
+#include "testData.txt"
+#include "testData.txt"
 };
 
 typedef struct singleThread {
